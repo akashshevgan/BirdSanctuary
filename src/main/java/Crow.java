@@ -22,6 +22,7 @@ public class Crow extends Bird implements Flyable {
     void incrementCount(){
         count++;
     }
+
     @Override
     void decrement(){
         count--;

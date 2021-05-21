@@ -5,7 +5,6 @@ public class Parrot extends Bird implements Flyable {
     public Parrot(String id){
         this.id = id;
     }
-
     public void eat() {
         System.out.println("parrot is eating");
     }
@@ -21,11 +20,11 @@ public class Parrot extends Bird implements Flyable {
     }
 
     @Override
-    void incrementCount(){
-        count++;
-    }
+    void incrementCount(){ count++; }
+
     @Override
     void decrement(){
         count--;
     }
+
 }

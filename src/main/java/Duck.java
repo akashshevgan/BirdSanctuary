@@ -27,6 +27,7 @@ public class Duck extends Bird implements Flyable, Swimable {
     void incrementCount(){
         count++;
     }
+
     @Override
     void decrement(){
         count--;

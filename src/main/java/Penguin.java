@@ -11,6 +11,7 @@ public class Penguin extends Bird implements Swimable{
     public void swin(){
         System.out.println("Penguin is swin");
     }
+
     @Override
     int getCount(){
         return count;

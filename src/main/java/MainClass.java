@@ -1,17 +1,19 @@
 public class MainClass {
-    public static void main(String args[]){
-        BirdSanctuaryManager birdSanctuarymanager = new BirdSanctuaryManager();
+    public static void main(String args[])throws Exception{
+        BirdSanctuaryManager birdSanctuarymanager = BirdSanctuaryManager.getInstance();
+        BirdFactory birdFactory = new BirdFactory();
 
-        Parrot parrot = new Parrot("p");
+        Bird parrot = birdFactory.getBird("paroot", "p");
         Parrot parrot1 = new Parrot("p1");
         Parrot parrot2 = new Parrot("p2");
         Parrot parrot3 = new Parrot("p3");
+        Parrot parrot4 = new Parrot("p4");
         Duck duck = new Duck("d");
         Penguin penguin  = new Penguin("pn");
         Crow crow = new Crow("c");
         Crow crow1 = new Crow("c");
 
-        birdSanctuarymanager.add(parrot);
+        birdSanctuarymanager.add(null);
         birdSanctuarymanager.add(parrot);
         birdSanctuarymanager.add(parrot1);
         birdSanctuarymanager.add(parrot2);
@@ -23,15 +25,14 @@ public class MainClass {
 
         System.out.println("Total birds =" + birdSanctuarymanager.getAllCount());
 
-        birdSanctuarymanager.print();
+        birdSanctuarymanager.printSwimable();
+        birdSanctuarymanager.printEatable();
+        birdSanctuarymanager.printFlyable();
+
         System.out.println("parrots are " + parrot.getCount());
         System.out.println("penguin are " + penguin.getCount());
         System.out.println("duck " + duck.getCount());
         System.out.println("crow" + crow.getCount());
-
-        //birdSanctuarymanager.remove(parrot1);
-        //birdSanctuarymanager.remove(parrot2);
-
         System.out.println("parrots are " + parrot.getCount());
         System.out.println("penguin are " + penguin.getCount());
         System.out.println("duck are " + duck.getCount());
